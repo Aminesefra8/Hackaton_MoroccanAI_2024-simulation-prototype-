@@ -1,0 +1,59 @@
+# Environnements virtuels Python
+venv/
+.env/
+__pycache__/
+*.py[cod]
+
+# Configurations et fichiers sensibles
+.env
+.env.local
+*.env.*
+*.secret
+
+# Fichiers log
+*.log
+*.out
+*.err
+
+# Dossiers de build et de distribution
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Bibliothèques et dépendances de Node.js
+node_modules/
+
+# Fichiers générés par les IDE
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Fichiers de sauvegarde
+*.bak
+*.tmp
+*.swp
+*~
+
+# Fichiers système
+.DS_Store      # macOS
+Thumbs.db      # Windows
+desktop.ini    # Windows
+
+# Fichiers Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Dossiers de tests, couverture de code, et rapports
+coverage/
+*.cover
+*.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.lcov
+
+# Fichiers de déploiement et configurations locales
+*.local
+*.test
