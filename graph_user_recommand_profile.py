@@ -14,7 +14,6 @@ from typing import Optional
 from pydantic import BaseModel, Field
 
 
-
 class Info_Type(BaseModel):
     # Description of bad mental health with details
     mental_health_description: str = Field(
@@ -32,7 +31,7 @@ class Info_Type(BaseModel):
             "whether in the past or present. Set to 'True' if the description includes any mention of "
             "issues or symptoms of poor mental health; otherwise, 'False'."
         ),
-        enum = ["True", "False"]
+        enum=["True", "False"]
     )
     
     # Boolean to indicate whether the user is currently cured of mental health issues
@@ -41,9 +40,11 @@ class Info_Type(BaseModel):
             "A boolean value indicating whether the user is currently cured of their mental health issues. "
             "Set to 'True' if the user has completely recovered and is mentally healthy; otherwise, set to 'False'."
         ),
-        enum = ["True", "False"]
+        enum=["True", "False"]
     )
+    
 
+    
 
 #Chains 
 
@@ -149,7 +150,8 @@ def output_final(state: State):
     output_dict = {
         "bad_mental_health_profile": state["extract_info_output"].mental_health_description,
         "is_badmental_health": state["extract_info_output"].is_badmental_health,
-        "Is_mentally_cured": state["extract_info_output"].Is_mentally_cured
+        "Is_mentally_cured": state["extract_info_output"].Is_mentally_cured,
+        "motivation": state["extract_info_output"].motivation
     }
 
     return {"output_dict": output_dict}
